@@ -1,0 +1,39 @@
+.about-us {
+	margin: 0px 0px 35px 0px;
+	padding: 0px 0px 30px 0px;
+	border-bottom: 1px solid #E8EDF2;
+	// .about-us__content
+
+	&__content {
+		text-align: center;
+		color: #3A4047;
+	}
+
+	// .about-us__content-title
+
+	&__content-title {
+		font-size: 36px;
+		line-height: 42px;
+		margin: 0px 0px 13px 0px;
+	}
+
+	// .about-us__content-subtitle
+
+	&__content-subtitle {
+		font-size: 24px;
+		line-height: 28px;
+		margin: 0px 0px 34px 0px;
+	}
+
+	// .about-us__content-descr
+
+	&__content-descr {
+		font-size: 14px;
+		line-height: 16px;
+		text-align: justify;
+
+		@media (max-width: 380px) {
+			text-align: left;
+		}
+	}
+}

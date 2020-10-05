@@ -1,0 +1,273 @@
+.footer {
+	padding: 20px 0px 22px;
+	background: #F3F3F3;
+	box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.05);
+
+	@media (max-width: $md3+px) {
+		padding: 15px 0px 17px;
+	}
+
+	// .footer__content
+
+	&__content {
+		position: relative;
+	}
+
+	// .footer__call-back
+	&__call-back {
+		position: absolute;
+		right: -138px;
+		top: -80px;
+
+		@media (max-width: 1450px) {
+			right: 0px;
+			top: -130px;
+		}
+
+		@media (max-width: $md3+px) {
+			display: none;
+		}
+	}
+	// .footer__row
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 0px -10px;
+
+		@media (max-width: $md2+px) {
+			margin: -10px;
+		}
+	}
+
+	// .footer__column
+
+	&__column {
+		padding: 0px 10px;
+		justify-content: space-between;
+
+		&:nth-child(2){
+			flex-basis: 265px;
+			flex-shrink: 1;
+		}
+
+		@media (max-width: 992px) {
+			flex-basis: 46%;
+			flex-shrink: 1;
+			padding: 10px;
+
+			&:nth-child(2){
+				order: 2;
+				flex-basis: 46%;
+
+				@media (max-width: 570px) {
+					flex-basis: 100%;
+				}
+			}
+			&:nth-child(3){
+				order: 3;
+			}
+			&:nth-child(4){
+				order: 4;
+			}
+
+		}
+
+		@media (max-width: 570px) {
+			flex-basis: 100%;
+			flex-shrink: 1;
+		}
+
+		&--right {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+
+			@media (max-width: 1150px) {
+				flex: 0 1 17%;
+			}
+
+			@media (max-width: 850px) {
+				align-items: flex-start;
+			}
+		}
+	}
+
+	// .footer__logo
+
+	&__logo {
+		margin: 0px 0px 15px 0px;
+
+		@media (max-width: $md3+px) {
+			margin: 0;
+		}
+	}
+
+	// .footer__copyright
+
+	&__copyright {
+		font-size: 14px;
+		line-height: 16px;
+		color: #3A4047;
+	}
+
+	// .footer__about
+
+	&__about {
+		font-family: "Roboto";
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 21px;
+		color: #3A4047;
+		margin: 15px 0px 25px 0px;
+
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 20px 0px;
+		}
+
+		@media (max-width: 600px) {
+			margin: 0px 0px 10px 0px;
+		}
+	}
+
+	// .footer__work
+
+	&__work {
+		font-size: 14px;
+		line-height: 16px;
+		color: #3A4047;
+
+		@media (max-width: 1050px) {
+			font-size: 13px;
+		}
+	}
+
+	// .footer__nav
+
+	&__nav {
+		display: flex;
+		margin: 0px -33px;
+
+		@media (max-width: 1050px) {
+			margin: 0px -7.5px;
+		}
+
+		@media (max-width: 570px) {
+			margin: 0px -20px;
+		}
+	}
+
+	// .footer__nav-list
+
+	&__nav-list {
+		padding: 0px 33px;
+
+		@media (max-width: 1050px) {
+			padding: 0px 7.5px;
+		}
+
+		@media (max-width: 570px) {
+			padding: 0px 20px;
+		}
+	}
+
+	// .footer__nav-item
+
+	&__nav-item {
+		margin: 0px 0px 16px 0px;
+
+		@media (max-width: $md3+px) {
+			margin: 0px 0 10px 0;
+		}
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	// .footer__nav-link
+
+	&__nav-link {
+		font-family: "Roboto";
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 21px;
+		border-bottom: 1px solid #3A4047;
+		color: #3A4047;
+		transition: color .3s, border-bottom .3s;
+
+		@media (min-width: $md2+px) {
+			&:hover {
+				color: #1AB0CE;
+				border-color: #1AB0CE;
+			}
+		}
+	}
+
+	// .footer__contacts
+
+	&__contacts {
+		display: flex;
+		align-items: center;
+		margin: 0px 0px 20px 0px;
+
+		@media (max-width: $md3+px) {
+			margin: 0 0 15px 0;
+		}
+
+		@media (max-width: 570px) {
+			margin: 0 0 5px 0;
+		}
+	}
+
+	// .footer__link
+
+	&__link {
+		display: inline-block;
+		font-family: "Roboto";
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 21px;
+		border-bottom: 1px solid #3A4047;
+		color: #3A4047;
+		margin: 0px 0px 33px 0px;
+		transition: color .3s, border-bottom .3s;
+
+		@media (max-width: $md3+px) {
+			margin: 0 0 16px 0;
+		}
+
+		@media (min-width: $md2+px) {
+			&:hover {
+				color: #1AB0CE;
+				border-color: #1AB0CE;
+			}
+		}
+	}
+
+	// .footer__company
+
+	&__company {
+		position: relative;
+		font-family: "Cuprum";
+		font-weight: 400;
+		font-size: 11px;
+		line-height: 16px;
+		text-transform: uppercase;
+		white-space: nowrap;
+		color: #3A4047;
+		padding: 0px 0px 0px 20px;
+		
+		&::before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			background: url("../img/icons/logo-company.png") 0 0 no-repeat;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}

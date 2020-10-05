@@ -1,0 +1,170 @@
+.menu {
+	
+	@media (max-width: $md2+px) {
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 150px 15px 50px 15px;
+		overflow: auto;
+		display: block;
+		background-color: rgba(#000, .9);
+		transform: translateY(-100%);
+		transition: transform 0.6s ease 0s;
+
+		@media (max-width: 600px) {
+			padding: 125px 15px 50px 15px;
+		}
+
+		&.menu.active {
+			transform: translateY(0%);
+		}
+	}
+	// .menu__list
+
+	&__list {
+		display: flex;
+		position: relative;
+		z-index: 3;
+
+		@media (max-width: $md2+px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	// .menu__item
+
+	&__item {
+		display: flex;
+		text-align: center;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 1px;
+			height: 13px;
+			background: #E8EDF2;
+
+			@media (max-width: $md2+px) {
+				content: none;
+			}
+		}
+
+
+		&:first-child {
+			.menu__link {
+				padding: 19px 30px 19px 0;
+
+				@media (max-width: $md1+px) {
+					padding: 19px 15px 19px 0;
+				}
+
+				@media (max-width: $md2+px) {
+					padding: 19px 15px 19px 15px;
+				}
+			}
+		}
+	}
+
+	// .menu__link
+
+	&__link {
+		font-size: 16px;
+		padding: 19px 35px;
+		font-weight: 600;
+		color: #3A4047;
+		text-transform: uppercase;
+		border-top: 1px solid transparent;
+		transition: color .3s, border-top .3s;
+
+		@media (max-width: $md1+px) {
+			padding: 19px 15px 19px 15px;
+		}
+
+		@media (max-width: $md2+px) {
+			font-size: 24px;
+			color: #fff;
+			padding: 15px;
+		}
+
+		@media (min-width: $md2+px) {
+
+			&:hover {
+				color: #1AB0CE;
+				border-top: 1px solid #1AB0CE;
+			}
+		}
+	}
+
+	// .menu__burger
+
+	&__burger {
+		display: none;
+
+		@media (max-width: $md2+px) {
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 20px;
+			right: 15px;
+			top: 1px;
+			cursor: pointer;
+			z-index: 11;
+
+			&.active{
+				
+			}
+
+			&::after,
+			&::before {
+				content: "";
+				background-color: #3a4047;
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				left: 0;
+				transition: all 0.3s ease 0s;
+			}
+
+			span {
+				position: absolute;
+				background-color: #3a4047;
+				width: 100%;
+				height: 2px;
+				left: 0;
+				top: 9px;
+				transition: all 0.3s ease 0s;
+			}
+			&::before {
+				top: 0;
+			}
+			&::after {
+				bottom: 0;
+			}
+			
+			&.active::before{
+				transform: rotate(45deg);
+				top: 9px;
+				background-color: #fff;
+			}
+			&.active span {
+				transform: scale(0);
+				background-color: #fff;
+			}
+			&.active::after{
+				transform: rotate(-45deg);
+				background-color: #fff;
+				bottom: 9px;
+			}
+		}
+
+	}
+}
+ 

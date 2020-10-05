@@ -1,0 +1,150 @@
+.news {
+	margin: 0px 0px 50px 0px;
+
+	@media (max-width: $md3+px) {
+		margin: 0px 0px 40px 0px;
+	}
+
+	@media (max-width: $md4+px) {
+		margin: 0px 0px 30px 0px;
+	}
+	// .news__content
+
+	&__content {
+		text-align: center;
+	}
+
+	// .news__body
+
+	&__body {
+		margin: 0px 0px 40px 0px;
+
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	// .news__title
+
+	&__title {
+		margin: 0px 0px 50px 0px;
+		color: #3A4047;
+		font-size: 36px;
+		line-height: 42px;
+
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 40px 0px;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	// .news__row
+
+	&__row {
+		display: flex;
+		flex-flow: row wrap;
+
+		@media (max-width: 650px) {
+			margin: -15px 0px;
+		}
+	}
+
+	// .news__column
+
+	&__column {
+		flex: 0 1 32%;
+
+		@media (max-width: $md2+px) {
+			margin: 0px 15 / $maxWidthContainer * 100vw 0px 0px;
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+
+		@media (max-width: 650px) {
+			flex: 0 1 100%;
+			margin: 0;
+			padding: 15px 0px;
+		}
+	}
+
+	// .news__item
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		padding: 30px 18px 30px;
+		cursor: pointer;
+		transition: all .3s;
+
+		@media (max-width: $md2+px) {
+			background: #FFFFFF;
+			box-shadow: 0px -1px 0px #1AB0CE, 0px 14px 24px rgba(0, 0, 0, 0.05);
+		}
+
+		@media (max-width: $md3+px) {
+			padding: 25px 13px 25px;
+		}
+
+		@media (min-width: $md2+px) {
+			&:hover {
+				background: #FFFFFF;
+				box-shadow: 0px -1px 0px #1AB0CE, 0px 14px 24px rgba(0, 0, 0, 0.05);
+			
+				.news__item-descr {				
+					color: #1AB0CE;
+					text-decoration-color: #1AB0CE;
+				}
+			}
+		}
+	}
+
+	// .news__item-date
+
+	&__item-date {
+		font-size: 14px;
+		line-height: 16px;
+		color: #BEC7D1;
+		margin: 0px 0px 14px 0px;
+
+		@media (max-width: $md3+px) {
+			margin: 0px 0 10px 0;
+		}
+	}
+
+	// .news__item-descr
+
+	&__item-descr {
+		font-size: 16px;
+		line-height: 19px;
+		color: #3A4047;
+		text-decoration: underline;
+		text-decoration-color: transparent;
+		transition: all .3s;
+	}
+
+	// .news__btn
+
+	&__btn {
+		display: inline-block;
+		padding: 8px 23px;
+		background: #FFFFFF;
+		border: 1px solid #1AB0CE;
+		border-radius: 2px;
+		font-size: 14px;
+		color: #1AB0CE;
+		transition: color .3s, background .3s;
+
+		@media (min-width: $md2+px) {
+			&:hover {				
+				background: #1AB0CE;
+				color: #fff;
+			}
+		}
+	}
+}
